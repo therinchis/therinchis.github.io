@@ -1,0 +1,114 @@
+.projects__list {
+  margin-top: 48px;
+}
+
+.projects__item {
+  position: relative;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: var(--transition-smooth);
+  overflow: hidden;
+}
+
+.projects__item:first-child {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.projects__item:hover {
+  padding-left: 24px;
+}
+
+.projects__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.projects__num {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.projects__year {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.projects__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 16px;
+  transition: color var(--transition-fast);
+  letter-spacing: -1px;
+}
+
+.projects__item:hover .projects__title {
+  color: var(--accent);
+}
+
+.projects__desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.projects__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projects__tag {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  transition: var(--transition-fast);
+}
+
+.projects__item:hover .projects__tag {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+}
+
+/* Hover line */
+.projects__hover-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.8s var(--ease-out-expo);
+}
+
+.projects__item:hover .projects__hover-line {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .projects__item {
+    padding: 32px 0;
+  }
+
+  .projects__item:hover {
+    padding-left: 0;
+  }
+
+  .projects__title {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+}

@@ -1,0 +1,74 @@
+/* Hide default cursor on desktop */
+@media (hover: hover) {
+  * {
+    cursor: none !important;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  top: -24px;
+  left: -24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              height 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              top 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              left 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              background 0.35s ease,
+              border-color 0.35s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+.custom-cursor--hover {
+  width: 96px;
+  height: 96px;
+  top: -48px;
+  left: -48px;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: transparent;
+}
+
+.custom-cursor__text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #000;
+  opacity: 0;
+  transition: opacity 0.2s ease 0.1s;
+}
+
+.custom-cursor--hover .custom-cursor__text {
+  opacity: 1;
+}
+
+.custom-cursor__dot {
+  position: fixed;
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  pointer-events: none;
+  z-index: 10000;
+  will-change: transform;
+  mix-blend-mode: difference;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor,
+  .custom-cursor__dot {
+    display: none !important;
+  }
+}
