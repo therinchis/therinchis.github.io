@@ -105,6 +105,26 @@
   }
 }
 
+/* Looping wave on "Christian" */
+.hero__char--wave {
+  animation:
+    charReveal 0.6s var(--ease-out-expo) both,
+    letterWave 3s ease-in-out var(--wave-delay, 0s) infinite;
+  animation-delay: var(--anim-delay, 0.85s), calc(1.6s + var(--wave-delay, 0s));
+}
+
+@keyframes letterWave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-12px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+}
+
 .hero__info {
   display: flex;
   gap: 48px;

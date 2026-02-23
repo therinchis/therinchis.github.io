@@ -3,7 +3,7 @@
   margin-top: 48px;
 }
 
-/* Each skill row — uses same reveal pattern as projects */
+/* Each skill row */
 .skills__item {
   display: grid;
   grid-template-columns: 120px 1fr 40px;
@@ -13,18 +13,16 @@
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
   overflow: hidden;
-  transition: background 0.4s ease, padding 0.4s var(--ease-out-expo);
+  transition: padding 0.4s var(--ease-out-expo);
 }
 
 .skills__item:first-child {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* Hover glow */
+/* No background change on hover — plain like Projects */
 .skills__item:hover {
-  background: var(--bg-card);
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 8px;
 }
 
 /* Left column */
@@ -52,6 +50,7 @@
 .skills__icon {
   width: 36px;
   height: 36px;
+  object-fit: contain;
   opacity: 0.6;
   transition: opacity 0.4s ease, transform 0.4s var(--ease-out-expo);
 }
@@ -132,7 +131,6 @@
 
   .skills__item:hover {
     padding-left: 0;
-    padding-right: 0;
   }
 
   .skills__left {

@@ -6,6 +6,8 @@ import Marquee from './components/Marquee';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Achievement from './components/Achievement';
+import TechStack from './components/TechStack';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
@@ -33,6 +35,8 @@ function App() {
           separator="—"
         />
         <Projects />
+        <Achievement />
+        <TechStack />
         <Contact />
       </main>
       <Footer />

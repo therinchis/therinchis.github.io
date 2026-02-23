@@ -48,11 +48,6 @@ export default function Navbar() {
           Rayhan C.
         </a>
 
-        <div className="nav__status">
-          <span className="nav__status-dot" />
-          <span>Available for work</span>
-        </div>
-
         <button
           className={`nav__hamburger ${menuOpen ? 'active' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}

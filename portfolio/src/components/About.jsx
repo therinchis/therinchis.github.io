@@ -51,7 +51,7 @@ export default function About() {
                             </div>
                             <div className="about__meta-item">
                                 <span className="about__meta-label">Focus</span>
-                                <span className="about__meta-value">UI/UX & Graphic Design</span>
+                                <span className="about__meta-value">UI/UX & Web Developer</span>
                             </div>
                         </div>
                     </div>

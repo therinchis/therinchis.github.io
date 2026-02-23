@@ -111,8 +111,11 @@ export default function HeroSequence() {
                                 {lastLetters.map((l, i) => (
                                     <span
                                         key={i}
-                                        className="hero__char"
-                                        style={{ animationDelay: `${0.85 + i * 0.04}s` }}
+                                        className="hero__char hero__char--wave"
+                                        style={{
+                                            animationDelay: `${0.85 + i * 0.04}s`,
+                                            '--wave-delay': `${i * 0.1}s`,
+                                        }}
                                     >{l}</span>
                                 ))}
                             </span>
@@ -121,7 +124,7 @@ export default function HeroSequence() {
                         <div className="hero__info">
                             <p className="hero__role">
                                 UI/UX Designer &<br />
-                                Graphic Designer
+                                Web Developer
                             </p>
                             <p className="hero__location">
                                 Based in Jakarta,<br />
