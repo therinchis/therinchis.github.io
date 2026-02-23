@@ -8,7 +8,8 @@ const projects = [
         description:
             'Mengembangkan aplikasi UI/UX dengan mengusung tema recycling oil from household. Fokus pada user research dan prototyping.',
         tags: ['UI/UX', 'Figma', 'Research'],
-        year: '2024',
+        year: '2025',
+        link: 'https://www.figma.com/proto/E3LGiRf8K56L3tMwGTtRFV/Cosmos_Technology-for-Enviroment_OilKu?node-id=17-737&p=f&t=njEDIzVOs6w9Uxws-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=17%3A737',
     },
     {
         num: '02',
@@ -16,15 +17,15 @@ const projects = [
         description:
             'Membuat asset game design dengan Blender 3D dan menyusun UI/UX dengan Figma. Game bertema petualangan budaya Nusantara.',
         tags: ['Game Design', 'Blender 3D', 'Figma'],
-        year: '2024',
+        year: '2025',
     },
     {
         num: '03',
         title: 'SI TA',
         description:
-            'Membangun aplikasi website berbasis CRM untuk mengelola Tugas Akhir di Sistem Informasi UPJ.',
-        tags: ['Web App', 'CRM', 'Full Stack'],
-        year: '2025',
+            'Membangun aplikasi website berbasis MVC untuk mengelola Tugas Akhir di Sistem Informasi UPJ.',
+        tags: ['Web App', 'MVC', 'FULL-STACK', 'MySQL', 'Bootstrap'],
+        year: '2026',
     },
 ];
 
@@ -55,30 +56,41 @@ export default function Projects() {
                 </h2>
 
                 <div className="projects__list">
-                    {projects.map((project, index) => (
-                        <div
-                            key={project.num}
-                            className={`projects__item reveal reveal-delay-${index + 2}`}
-                            data-cursor="view"
-                        >
-                            <div className="projects__item-header">
-                                <span className="projects__num">{project.num}</span>
-                                <span className="projects__year">{project.year}</span>
-                            </div>
+                    {projects.map((project, index) => {
+                        const ItemTag = project.link ? 'a' : 'div';
+                        return (
+                            <ItemTag
+                                key={project.num}
+                                href={project.link}
+                                target={project.link ? "_blank" : undefined}
+                                rel={project.link ? "noopener noreferrer" : undefined}
+                                className={`projects__item reveal reveal-delay-${index + 2}`}
+                                data-cursor={project.link ? "view" : ""}
+                                style={{
+                                    display: 'block',
+                                    textDecoration: 'none',
+                                    color: 'inherit'
+                                }}
+                            >
+                                <div className="projects__item-header">
+                                    <span className="projects__num">{project.num}</span>
+                                    <span className="projects__year">{project.year}</span>
+                                </div>
 
-                            <h3 className="projects__title">{project.title}</h3>
+                                <h3 className="projects__title">{project.title}</h3>
 
-                            <p className="projects__desc">{project.description}</p>
+                                <p className="projects__desc">{project.description}</p>
 
-                            <div className="projects__tags">
-                                {project.tags.map((tag) => (
-                                    <span key={tag} className="projects__tag">{tag}</span>
-                                ))}
-                            </div>
+                                <div className="projects__tags">
+                                    {project.tags.map((tag) => (
+                                        <span key={tag} className="projects__tag">{tag}</span>
+                                    ))}
+                                </div>
 
-                            <div className="projects__hover-line" />
-                        </div>
-                    ))}
+                                <div className="projects__hover-line" />
+                            </ItemTag>
+                        );
+                    })}
                 </div>
             </div>
         </section>
