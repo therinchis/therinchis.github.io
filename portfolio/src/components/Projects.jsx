@@ -21,6 +21,15 @@ const projects = [
     },
     {
         num: '03',
+        title: 'Penum GO',
+        description:
+            'Mendesain UI/UX aplikasi mobile pemesanan tiket pesawat dengan fitur pencarian penerbangan, pemilihan kursi, boarding pass digital, dan tracking penerbangan real-time.',
+        tags: ['UI/UX', 'Mobile App', 'Figma'],
+        year: '2025',
+        link: 'https://www.figma.com/proto/GdsckI1U7C9s13re0EqbQC/Penum-Go?page-id=4%3A51&node-id=765-759&p=f&viewport=-1785%2C-682%2C0.04&t=Xu8J5oHeUsHS0azg-1&scaling=min-zoom&content-scaling=fixed',
+    },
+    {
+        num: '04',
         title: 'SI TA',
         description:
             'Membangun aplikasi website berbasis MVC untuk mengelola Tugas Akhir di Sistem Informasi UPJ.',

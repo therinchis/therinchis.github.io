@@ -4,31 +4,31 @@ import './Skills.css';
 const skills = [
     {
         num: '01',
-        title: 'Graphic Design',
-        description:
-            'Membuat visual yang menarik dan komunikatif. Adobe Photoshop untuk editing, retouching, dan konten visual.',
-        icon: '/images/Adobe_Photoshop_CC_icon.svg (1).png',
-    },
-    {
-        num: '02',
         title: 'UI/UX Design',
         description:
             'Merancang antarmuka yang intuitif melalui riset pengguna, wireframing, prototyping, dan usability testing.',
         icon: '/images/Figma-logo.svg.png',
     },
     {
+        num: '02',
+        title: 'Front-End Development',
+        description:
+            'Membangun website modern dan responsif dengan HTML, CSS, JavaScript, dan React menggunakan Visual Studio Code.',
+        icon: '/images/Visual_Studio_Code_1.35_icon.svg.png',
+    },
+    {
         num: '03',
-        title: 'AI Engineering',
+        title: 'Machine Learning',
         description:
             'Eksplorasi teknologi AI untuk solusi cerdas — machine learning, NLP, dan computer vision menggunakan Python.',
         icon: '/images/Python-logo-notext.svg.png',
     },
     {
         num: '04',
-        title: 'Front-End Development',
+        title: 'Graphic Design',
         description:
-            'Membangun website modern dan responsif dengan HTML, CSS, JavaScript, dan React menggunakan Visual Studio Code.',
-        icon: '/images/Visual_Studio_Code_1.35_icon.svg.png',
+            'Membuat visual yang menarik dan komunikatif. Adobe Photoshop untuk editing, retouching, dan konten visual.',
+        icon: '/images/Adobe_Photoshop_CC_icon.svg (1).png',
     },
 ];
 
